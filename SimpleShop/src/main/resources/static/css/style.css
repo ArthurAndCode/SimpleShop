@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+}
+header {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.main-content {
+    background-color: rgb(230, 230, 230);
+    margin: auto;
+    margin-top: 30px;
+    width: 75%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.item {
+    background-color: rgb(252, 252, 252);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.item-name {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    font-size: large;
+    font-weight: bold;
+    width: calc(100% - 4px);
+    margin-top: 0%;
+}
+.item img {
+    width: 150px;
+    height: 200px;
+
+}
+.add-btn {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    width: 70%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.add-btn:hover {
+    background-color: rgb(48, 49, 49);
+}
+.cart-icon {
+    font-size: large;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+}
+.cart-icon:hover {
+    color: gold;
+}
+.summary {
+    text-decoration: none;
+    color: black;
+    flex-direction: column;
+}
+table {
+    width: 80%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th{
+    text-align: left;
+    border: solid black;
+}
+td img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.mbtn {
+    background-color: blanchedalmond;
+    text-decoration: none;
+    display: block;
+    width: 30px;
+    height: 25px;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 5px;
+    font-size: larger;
+    font-weight: bold;
+}
+.mbtn:hover {
+    background-color:rgb(233, 215, 186) ;
+}
+td p{
+    margin: 3px;
+    padding: 5px
+}
+form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+

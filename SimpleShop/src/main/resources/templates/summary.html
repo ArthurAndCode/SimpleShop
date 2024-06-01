@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BeerShop</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<header th:replace="~{fragments/header :: ShopHeader}"></header>
+    <div class="main-content">
+        <div class="summary">
+    <p><span>Do zapłaty </span><span th:text="${@cart.sum}"></span>zł</p>
+    <form th:action="@{/order/saveorder}" method="post">
+        <label>Imię</label>
+        <input type="text" name="firstName" required>
+        <label>Nazwisko</label>
+        <input type="text" name="lastName" required>
+        <label>Adres</label>
+        <input type="text" name="address" required>
+        <label>kod pocztowy</label>
+        <input type="text" name="postCode" required>
+        <label>Miasto</label>
+        <input type="text" name="city" required>
+        <button type="submit" class="add-btn">Zamów</button>
+    </form>
+        </div>
+    </div>
+</body>
+</html>

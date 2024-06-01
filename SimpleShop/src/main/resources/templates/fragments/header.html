@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <header th:fragment="ShopHeader">
+        <span class="title">Sklep z Piwem Artura</span>
+        <a th:href="@{/order/cart}" class="cart-icon">
+        <div>
+            <span>koszyk (</span>
+            <span th:text="${@cart.counter}"></span>
+            <span> )</span>
+            <span th:text="${@cart.sum}"></span>
+            <span>zł</span>
+        </div>
+        </a>
+    </header>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BeerShop</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<header th:replace="~{fragments/header :: ShopHeader}"></header>
+    <div class="main-content">
+        <div style ="width: 100%; display: flex; flex-direction: column; align-items: center;">
+            <table>
+                <tr>
+                    <th>Lp</th>
+                    <th></th>
+                    <th>Nazwa</th> 
+                    <th>Ilość</th>
+                    <th>Suma(zł)</th>
+                    <th></th>
+                </tr>
+                <tr th:each="cartItem : ${@cart.cartItems}">
+                    <td>1</td>
+                    <td>
+                        <img th:src="@{${cartItem.item.imgUrl}}">
+                    </td>
+                    <td th:text="${cartItem.item.name}"></td>
+                    <td style="display: flex; padding-top: 10px;">
+                        <a th:href="@{'/order/increase/' + ${cartItem.item.id}}" class="mbtn">+</a>
+                        <p th:text="${cartItem.counter}"></p>
+                        <a th:href="@{'/order/decrease/' + ${cartItem.item.id}}" class="mbtn">-</a>
+                    </td>
+                    <td th:text="${cartItem.price}"></td>
+                    <td>
+                        <a th:href="@{'/order/remove/' + ${cartItem.item.id}}" class="mbtn">X</a>
+                    </td>
+                </tr>
+            </table>
+            <div class="summary">
+                <p><span>Do zapłaty </span><span th:text="${@cart.sum}">  </span>zł</p>
+            </div>
+            <a th:href="@{/order/summary}" class="add-btn">Dalej</a>
+        </div>
+    </div>
+</body>
+</html>
